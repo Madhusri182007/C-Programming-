@@ -11,6 +11,7 @@ int main()
         Sum=Sum*10+rem;
         N=N/10;
     }
+    printf("Reversed number:%d\n",Sum);
     if(t==Sum)
     {
         printf("Palindrome Number");
