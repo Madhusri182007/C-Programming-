@@ -1,26 +1,34 @@
 #include<stdio.h>
 int main()
 {
-    int N,T,T1,Count=0,rem,i,Product=1,Sum=0,C,i1;
+    int N,t1,t,Product,sum=0,i,rem,count=0;
     printf("Enter the number:");
     scanf("%d",&N);
-    T=N;
-    T1=N;
-    while(T!=0)
+    t1=N;
+    t=N;
+    while(t1!=0)
     {
-        Count++;
-        T=T/10;
+        count++;
+        t1=t1/10;
     }
-    printf("Number of Digits:%d\n",Count);
-    for(i1=1;i1<=T1;i++)
-    {
-        rem=T1%10;
-        for(i=1;i<=Count;i++)
+    do{
+        rem=t%10;
+        Product=1;
+        for(i=1;i<=count;i++)
         {
-           C=Product*rem;
+            Product=Product*rem;
         }
-        Sum=Sum+C;
-        T=T/10;
-    }while(T1!=0);
-    printf("Armstrong number:%d",Sum);
+        sum=sum+Product;
+        t=t/10;
+    }while(t!=0);
+    if(N==sum)
+    {
+        printf("Armstrong number\n");
+    }
+    else
+    {
+        printf("Not a armstrong number\n");
+    }
+    printf("No of digits:%d\n",count);
+    printf("Sum:%d",sum);
 }
