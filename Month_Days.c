@@ -11,11 +11,15 @@ int main()
        {
         printf("February:28 days");
         }
+         else if(Month_Number%2==0 && Month_Number==6)
+        {
+            printf("30 days");
+        }
         if(Month_Number%2==0 && Month_Number==4)
         {
             printf("May 31 days");
         }
-        else if(Month_Number%2==0 && Month_Number!=2)
+        else if(Month_Number%2==0 && Month_Number!=2 && Month_Number!=6)
         {
             printf("31 days");
         }
@@ -31,6 +35,7 @@ int main()
         {
             printf("30 days");
         }
+       
     }
     return 0;
 }
