@@ -45,8 +45,6 @@ int main()
             Count++;
             Temp=Temp/10;
         }
-        for(i=0;i<N;i++)
-        {
         do
         {
             rem=Tempp%10;
@@ -58,11 +56,15 @@ int main()
             Sum=Sum+Product;
             Tempp=Tempp/10;
         }while(Tempp!=0);
+        if(T1==Sum)
+        {
+            printf("%d\n",Sum);
+            Armstrong++;
         }
         
     }
     printf("Number of even numbers:%d\n",Count_Even);
     printf("Number of odd numbers:%d\n",Count_Odd);
     printf("Numbe of Prime numbers:%d\n",prime);
-   // printf("Number of Armstrong number:%d\n",Armstrong);
+    printf("Number of Armstrong number:%d\n",Armstrong);
 }
