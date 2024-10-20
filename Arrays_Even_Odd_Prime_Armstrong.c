@@ -40,11 +40,14 @@ int main()
         T1=Num[i];
         Temp=Num[i];
         Tempp=Num[i];
+        Count=0;
         while(Temp!=0)
         {
             Count++;
             Temp=Temp/10;
         }
+        rem=0;
+        Sum=0;
         do
         {
             rem=Tempp%10;
@@ -58,7 +61,6 @@ int main()
         }while(Tempp!=0);
         if(T1==Sum)
         {
-            printf("%d\n",Sum);
             Armstrong++;
         }
         
