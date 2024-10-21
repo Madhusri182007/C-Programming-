@@ -1,23 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int S,N,Pos=0,Neg=0,i=1;
-    printf("Enter how many values do you want to read:");
-    scanf("%d",&S);
-    printf("Enter %d values:\n",S);
-    while(i<=S)
+    int N,p=0,n=0,Value;
+    printf("Enter how many values you want:");
+    scanf("%d",&Value);
+    printf("Enter %d values:\n",Value);
+    int i=1;
+    while(i<=Value)
     {
-        scanf("%d ",&N);
+        scanf("%d",&N);
         if(N>0)
         {
-            Pos++;
-            }
-            else if(N<0)
-            {
-                Neg++;
-            }
-            i++;
+            p++;
+        }
+        else if(N<0)
+        {
+            n++;
+        }
+        i++;
     }
-    printf("\nNumber of Positive numvers:%d",Pos);
-    printf("\nNumber of Negative numbers:%d",Neg);
+    printf(" Number of Positive numbers:%d",p);
+    printf("\nNumber of Negative numbers:%d",n);
+    
 }
