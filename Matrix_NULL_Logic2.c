@@ -37,11 +37,11 @@ int main()
       }
       if(Count==0)
       {
-          printf("Unit Matrix");
+          printf("Null Matrix");
       }
       else
       {
-          printf("Not a unti matrix");
+          printf("Not a Null matrix");
       }
     }
     else
