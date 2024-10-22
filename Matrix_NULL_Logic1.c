@@ -36,11 +36,11 @@ int main()
       }
       if(Count==R1*C1)
       {
-          printf("Unit Matrix");
+          printf("Null Matrix");
       }
       else
       {
-          printf("Not a unti matrix");
+          printf("Not a Null matrix");
       }
     }
     else
