@@ -13,6 +13,7 @@ int main()
             scanf("%d",&Mat[row][col]);
         }
     }
+    printf("The Transpose Matrix:");
     for(int i=0;i<R1;i++)
     {
         for(int j=0;j<C1;j++)
