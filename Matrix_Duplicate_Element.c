@@ -46,6 +46,8 @@ int main()
                 }
             }
         }
-      
+    }
+    else{
+        printf("Rows and Col not match");
     }
 }
