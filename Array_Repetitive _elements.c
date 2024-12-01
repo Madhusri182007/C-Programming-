@@ -27,6 +27,7 @@ int main()
         if(C!=0)
         {
             printf("Repetitive elment is:%d",a[i]);
+            break;
         }
         }
     }
