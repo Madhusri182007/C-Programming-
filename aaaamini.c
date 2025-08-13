@@ -131,28 +131,6 @@ void serve(struct customer *head) {
     }
     head->next = NULL; 
 }
-void removeCustomer(struct customer *head) 
-{
-    char ID[10];
-    printf("Enter Customer ID to remove: ");
-    scanf("%s", ID);
-
-    struct customer *prev = head, *curr = head->next;
-    while (curr != NULL) 
-    {
-        if (strcmp(curr->ID, ID) == 0) 
-        {
-            prev->next = curr->next;
-            free(curr);
-            printf("Customer removed successfully!\n");
-            return;
-        }
-        prev = curr;
-        curr = curr->next;
-    }
-    printf("Customer with ID %s not found.\n", ID);
-}
-
 void showStats(struct customer *head) 
 {
     struct customer *temp = head->next;
@@ -216,9 +194,8 @@ int main()
         printf("3. Search Customer by ID\n");
         printf("4. Edit Customer Details\n");
         printf("5. Serve Customers\n");
-       printf("6. Remove Customer\n");
-        printf("7. Show Bank Statistics\n");
-      printf("8. Exit\n");
+        printf("6. Show Bank Statistics\n");
+      printf("7. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -289,15 +266,8 @@ int main()
                 serve(regularQueue);
                 break;
             }
-            case 6:
-            {
-            printf("\n--- Remove from Priority Queue ---\n");
-            removeCustomer(priorityQueue);
-            printf("\n--- Remove from Regular Queue ---\n");
-            removeCustomer(regularQueue);
-            break;
-            }
-        case 7:
+            
+        case 6:
         {
             printf("\n--- Priority Queue Stats ---\n");
             showStats(priorityQueue);
@@ -305,7 +275,7 @@ int main()
             showStats(regularQueue);
             break;
         }
-            case 8:
+            case 7:
             {
                 printf(" Exiting Bank Queue Management System... Have a nice day!\n");
                 return 0;
@@ -315,4 +285,3 @@ int main()
         }
     }
 }
-
